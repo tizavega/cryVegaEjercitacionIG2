@@ -16,5 +16,10 @@ namespace cryVegaEjercitacionIG2
         {
             InitializeComponent();
         }
+
+        private void frmCaso2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

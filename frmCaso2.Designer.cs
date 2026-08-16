@@ -132,6 +132,7 @@
             Controls.Add(lblNúmero1);
             Name = "frmCaso2";
             Text = "Calculadora";
+            Load += frmCaso2_Load;
             ResumeLayout(false);
             PerformLayout();
         }
