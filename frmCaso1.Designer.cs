@@ -35,8 +35,8 @@
             lblEdad = new Label();
             lblCarrera = new Label();
             txtEdad = new TextBox();
-            txtCarrera = new TextBox();
             btnPresentar = new Button();
+            cmbCarrera = new ComboBox();
             SuspendLayout();
             // 
             // lblNombre
@@ -59,16 +59,16 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(191, 52);
+            txtNombre.Location = new Point(191, 57);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(100, 23);
+            txtNombre.Size = new Size(121, 23);
             txtNombre.TabIndex = 2;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(191, 86);
+            txtApellido.Location = new Point(191, 91);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(100, 23);
+            txtApellido.Size = new Size(121, 23);
             txtApellido.TabIndex = 3;
             // 
             // lblEdad
@@ -92,34 +92,38 @@
             // 
             // txtEdad
             // 
-            txtEdad.Location = new Point(191, 124);
+            txtEdad.Location = new Point(191, 129);
             txtEdad.Name = "txtEdad";
             txtEdad.Size = new Size(55, 23);
             txtEdad.TabIndex = 6;
             // 
-            // txtCarrera
-            // 
-            txtCarrera.Location = new Point(191, 161);
-            txtCarrera.Name = "txtCarrera";
-            txtCarrera.Size = new Size(100, 23);
-            txtCarrera.TabIndex = 7;
-            // 
             // btnPresentar
             // 
-            btnPresentar.Location = new Point(144, 215);
+            btnPresentar.Location = new Point(237, 208);
             btnPresentar.Name = "btnPresentar";
             btnPresentar.Size = new Size(75, 23);
             btnPresentar.TabIndex = 8;
             btnPresentar.Text = "Presentar";
             btnPresentar.UseVisualStyleBackColor = true;
+            btnPresentar.Click += btnPresentar_Click;
+            // 
+            // cmbCarrera
+            // 
+            cmbCarrera.FormattingEnabled = true;
+            cmbCarrera.Items.AddRange(new object[] { "Analista En Sistemas", "Programacion", "Creador De Videojuegos", "Comercio Exterior", "Diseño grafico" });
+            cmbCarrera.Location = new Point(191, 166);
+            cmbCarrera.Name = "cmbCarrera";
+            cmbCarrera.Size = new Size(121, 23);
+            cmbCarrera.TabIndex = 9;
+            cmbCarrera.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // frmCaso1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(347, 288);
+            ClientSize = new Size(368, 288);
+            Controls.Add(cmbCarrera);
             Controls.Add(btnPresentar);
-            Controls.Add(txtCarrera);
             Controls.Add(txtEdad);
             Controls.Add(lblCarrera);
             Controls.Add(lblEdad);
@@ -127,8 +131,12 @@
             Controls.Add(txtNombre);
             Controls.Add(lblApellido);
             Controls.Add(lblNombre);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmCaso1";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Mi Presentación";
+            Load += frmCaso1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -142,7 +150,7 @@
         private Label lblEdad;
         private Label lblCarrera;
         private TextBox txtEdad;
-        private TextBox txtCarrera;
         private Button btnPresentar;
+        private ComboBox cmbCarrera;
     }
 }
