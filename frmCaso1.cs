@@ -56,7 +56,11 @@ namespace cryVegaEjercitacionIG2
         }
         private void frmCaso1_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
+
+       
+
+       

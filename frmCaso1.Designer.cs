@@ -42,7 +42,7 @@
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(92, 60);
+            lblNombre.Location = new Point(70, 60);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(51, 15);
             lblNombre.TabIndex = 0;
@@ -51,7 +51,7 @@
             // lblApellido
             // 
             lblApellido.AutoSize = true;
-            lblApellido.Location = new Point(92, 94);
+            lblApellido.Location = new Point(70, 94);
             lblApellido.Name = "lblApellido";
             lblApellido.Size = new Size(51, 15);
             lblApellido.TabIndex = 1;
@@ -59,14 +59,14 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(191, 57);
+            txtNombre.Location = new Point(169, 57);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(121, 23);
             txtNombre.TabIndex = 2;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(191, 91);
+            txtApellido.Location = new Point(169, 91);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(121, 23);
             txtApellido.TabIndex = 3;
@@ -74,7 +74,7 @@
             // lblEdad
             // 
             lblEdad.AutoSize = true;
-            lblEdad.Location = new Point(92, 132);
+            lblEdad.Location = new Point(70, 132);
             lblEdad.Name = "lblEdad";
             lblEdad.Size = new Size(33, 15);
             lblEdad.TabIndex = 4;
@@ -83,7 +83,7 @@
             // lblCarrera
             // 
             lblCarrera.AutoSize = true;
-            lblCarrera.Location = new Point(92, 169);
+            lblCarrera.Location = new Point(70, 169);
             lblCarrera.Name = "lblCarrera";
             lblCarrera.Size = new Size(45, 15);
             lblCarrera.TabIndex = 5;
@@ -92,14 +92,14 @@
             // 
             // txtEdad
             // 
-            txtEdad.Location = new Point(191, 129);
+            txtEdad.Location = new Point(169, 129);
             txtEdad.Name = "txtEdad";
             txtEdad.Size = new Size(55, 23);
             txtEdad.TabIndex = 6;
             // 
             // btnPresentar
             // 
-            btnPresentar.Location = new Point(237, 208);
+            btnPresentar.Location = new Point(215, 208);
             btnPresentar.Name = "btnPresentar";
             btnPresentar.Size = new Size(75, 23);
             btnPresentar.TabIndex = 8;
@@ -111,7 +111,7 @@
             // 
             cmbCarrera.FormattingEnabled = true;
             cmbCarrera.Items.AddRange(new object[] { "Analista En Sistemas", "Programacion", "Creador De Videojuegos", "Comercio Exterior", "Diseño grafico" });
-            cmbCarrera.Location = new Point(191, 166);
+            cmbCarrera.Location = new Point(169, 166);
             cmbCarrera.Name = "cmbCarrera";
             cmbCarrera.Size = new Size(121, 23);
             cmbCarrera.TabIndex = 9;
@@ -121,7 +121,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(368, 288);
+            ClientSize = new Size(355, 288);
             Controls.Add(cmbCarrera);
             Controls.Add(btnPresentar);
             Controls.Add(txtEdad);

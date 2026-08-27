@@ -30,13 +30,14 @@
         {
             lblNúmero1 = new Label();
             lblNúmero2 = new Label();
-            txtNúmero1 = new TextBox();
-            txtNúmero2 = new TextBox();
+            txtNumero1 = new TextBox();
+            txtNumero2 = new TextBox();
             btnMultiplicacion = new Button();
             btnSuma = new Button();
             btnResta = new Button();
             btnDividir = new Button();
-            btnCalcular = new Button();
+            lblResultado = new Label();
+            btmReiniciar = new Button();
             SuspendLayout();
             // 
             // lblNúmero1
@@ -57,19 +58,19 @@
             lblNúmero2.TabIndex = 1;
             lblNúmero2.Text = "Número2";
             // 
-            // txtNúmero1
+            // txtNumero1
             // 
-            txtNúmero1.Location = new Point(209, 42);
-            txtNúmero1.Name = "txtNúmero1";
-            txtNúmero1.Size = new Size(100, 23);
-            txtNúmero1.TabIndex = 2;
+            txtNumero1.Location = new Point(209, 42);
+            txtNumero1.Name = "txtNumero1";
+            txtNumero1.Size = new Size(100, 23);
+            txtNumero1.TabIndex = 2;
             // 
-            // txtNúmero2
+            // txtNumero2
             // 
-            txtNúmero2.Location = new Point(209, 85);
-            txtNúmero2.Name = "txtNúmero2";
-            txtNúmero2.Size = new Size(100, 23);
-            txtNúmero2.TabIndex = 3;
+            txtNumero2.Location = new Point(209, 85);
+            txtNumero2.Name = "txtNumero2";
+            txtNumero2.Size = new Size(100, 23);
+            txtNumero2.TabIndex = 3;
             // 
             // btnMultiplicacion
             // 
@@ -79,6 +80,7 @@
             btnMultiplicacion.TabIndex = 4;
             btnMultiplicacion.Text = "( X )";
             btnMultiplicacion.UseVisualStyleBackColor = true;
+            btnMultiplicacion.Click += btnMultiplicacion_Click;
             // 
             // btnSuma
             // 
@@ -88,6 +90,7 @@
             btnSuma.TabIndex = 5;
             btnSuma.Text = "( + )";
             btnSuma.UseVisualStyleBackColor = true;
+            btnSuma.Click += btnSuma_Click;
             // 
             // btnResta
             // 
@@ -97,6 +100,7 @@
             btnResta.TabIndex = 6;
             btnResta.Text = "( - )";
             btnResta.UseVisualStyleBackColor = true;
+            btnResta.Click += btnResta_Click;
             // 
             // btnDividir
             // 
@@ -107,27 +111,37 @@
             btnDividir.Text = "( / )";
             btnDividir.UseVisualStyleBackColor = true;
             // 
-            // btnCalcular
+            // lblResultado
             // 
-            btnCalcular.Location = new Point(152, 230);
-            btnCalcular.Name = "btnCalcular";
-            btnCalcular.Size = new Size(75, 23);
-            btnCalcular.TabIndex = 8;
-            btnCalcular.Text = "Calcular";
-            btnCalcular.UseVisualStyleBackColor = true;
+            lblResultado.AutoSize = true;
+            lblResultado.Location = new Point(271, 233);
+            lblResultado.Name = "lblResultado";
+            lblResultado.Size = new Size(0, 15);
+            lblResultado.TabIndex = 8;
+            // 
+            // btmReiniciar
+            // 
+            btmReiniciar.Location = new Point(84, 229);
+            btmReiniciar.Name = "btmReiniciar";
+            btmReiniciar.Size = new Size(75, 23);
+            btmReiniciar.TabIndex = 9;
+            btmReiniciar.Text = "Reiniciar";
+            btmReiniciar.UseVisualStyleBackColor = true;
+            btmReiniciar.Click += btmReiniciar_Click;
             // 
             // frmCaso2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(373, 330);
-            Controls.Add(btnCalcular);
+            Controls.Add(btmReiniciar);
+            Controls.Add(lblResultado);
             Controls.Add(btnDividir);
             Controls.Add(btnResta);
             Controls.Add(btnSuma);
             Controls.Add(btnMultiplicacion);
-            Controls.Add(txtNúmero2);
-            Controls.Add(txtNúmero1);
+            Controls.Add(txtNumero2);
+            Controls.Add(txtNumero1);
             Controls.Add(lblNúmero2);
             Controls.Add(lblNúmero1);
             Name = "frmCaso2";
@@ -141,12 +155,13 @@
 
         private Label lblNúmero1;
         private Label lblNúmero2;
-        private TextBox txtNúmero1;
-        private TextBox txtNúmero2;
+        private TextBox txtNumero1;
+        private TextBox txtNumero2;
         private Button btnMultiplicacion;
         private Button btnSuma;
         private Button btnResta;
         private Button btnDividir;
-        private Button btnCalcular;
+        private Label lblResultado;
+        private Button btmReiniciar;
     }
 }
