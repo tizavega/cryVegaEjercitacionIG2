@@ -16,5 +16,25 @@ namespace cryVegaEjercitacionIG2
         {
             InitializeComponent();
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            string usuario = txtUsuario.Text.Trim();
+            string clave = txtClave.Text.Trim();
+            if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(clave))
+            {
+                MessageBox.Show("Por favor, completa todos los campos.");
+                return;
+            }
+           if (clave == "1234")
+           {
+               MessageBox.Show("Ingreso exitoso.", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           }
+           else
+           {
+               lblRespuesta.ForeColor = Color.Red;
+                lblRespuesta.Text = "usuario o clave incorrectos, intente nuevamente.";
+            }
+        }
     }
 }
