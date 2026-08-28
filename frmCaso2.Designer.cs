@@ -144,7 +144,10 @@
             Controls.Add(txtNumero1);
             Controls.Add(lblNúmero2);
             Controls.Add(lblNúmero1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmCaso2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora";
             Load += frmCaso2_Load;
             ResumeLayout(false);

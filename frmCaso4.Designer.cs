@@ -33,23 +33,25 @@
             lblDNI = new Label();
             txtNombre = new TextBox();
             txtApellido = new TextBox();
-            txtDNI = new TextBox();
-            lblSexo = new Label();
             rbnMasculino = new RadioButton();
             rbnFemenino = new RadioButton();
-            lblTurno = new Label();
             rbnMañana = new RadioButton();
             rbnTarde = new RadioButton();
             rbnNoche = new RadioButton();
             lblCarrera = new Label();
             cmbCarrera = new ComboBox();
             btnRegistrar = new Button();
+            mtbDni = new MaskedTextBox();
+            gbxSexo = new GroupBox();
+            gbxTurno = new GroupBox();
+            gbxSexo.SuspendLayout();
+            gbxTurno.SuspendLayout();
             SuspendLayout();
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(44, 48);
+            lblNombre.Location = new Point(44, 21);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(51, 15);
             lblNombre.TabIndex = 0;
@@ -58,7 +60,7 @@
             // lblApellido
             // 
             lblApellido.AutoSize = true;
-            lblApellido.Location = new Point(44, 77);
+            lblApellido.Location = new Point(44, 50);
             lblApellido.Name = "lblApellido";
             lblApellido.Size = new Size(51, 15);
             lblApellido.TabIndex = 1;
@@ -67,7 +69,7 @@
             // lblDNI
             // 
             lblDNI.AutoSize = true;
-            lblDNI.Location = new Point(44, 105);
+            lblDNI.Location = new Point(44, 78);
             lblDNI.Name = "lblDNI";
             lblDNI.Size = new Size(27, 15);
             lblDNI.TabIndex = 2;
@@ -75,38 +77,22 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(172, 45);
+            txtNombre.Location = new Point(159, 18);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(100, 23);
+            txtNombre.Size = new Size(134, 23);
             txtNombre.TabIndex = 3;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(172, 74);
+            txtApellido.Location = new Point(159, 47);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(100, 23);
+            txtApellido.Size = new Size(134, 23);
             txtApellido.TabIndex = 4;
-            // 
-            // txtDNI
-            // 
-            txtDNI.Location = new Point(172, 102);
-            txtDNI.Name = "txtDNI";
-            txtDNI.Size = new Size(100, 23);
-            txtDNI.TabIndex = 5;
-            // 
-            // lblSexo
-            // 
-            lblSexo.AutoSize = true;
-            lblSexo.Location = new Point(44, 157);
-            lblSexo.Name = "lblSexo";
-            lblSexo.Size = new Size(32, 15);
-            lblSexo.TabIndex = 6;
-            lblSexo.Text = "Sexo";
             // 
             // rbnMasculino
             // 
             rbnMasculino.AutoSize = true;
-            rbnMasculino.Location = new Point(129, 155);
+            rbnMasculino.Location = new Point(11, 22);
             rbnMasculino.Name = "rbnMasculino";
             rbnMasculino.Size = new Size(80, 19);
             rbnMasculino.TabIndex = 7;
@@ -117,7 +103,7 @@
             // rbnFemenino
             // 
             rbnFemenino.AutoSize = true;
-            rbnFemenino.Location = new Point(251, 155);
+            rbnFemenino.Location = new Point(101, 22);
             rbnFemenino.Name = "rbnFemenino";
             rbnFemenino.Size = new Size(78, 19);
             rbnFemenino.TabIndex = 8;
@@ -125,19 +111,10 @@
             rbnFemenino.Text = "Femenino";
             rbnFemenino.UseVisualStyleBackColor = true;
             // 
-            // lblTurno
-            // 
-            lblTurno.AutoSize = true;
-            lblTurno.Location = new Point(44, 211);
-            lblTurno.Name = "lblTurno";
-            lblTurno.Size = new Size(38, 15);
-            lblTurno.TabIndex = 9;
-            lblTurno.Text = "Turno";
-            // 
             // rbnMañana
             // 
             rbnMañana.AutoSize = true;
-            rbnMañana.Location = new Point(109, 209);
+            rbnMañana.Location = new Point(10, 22);
             rbnMañana.Name = "rbnMañana";
             rbnMañana.Size = new Size(68, 19);
             rbnMañana.TabIndex = 10;
@@ -148,7 +125,7 @@
             // rbnTarde
             // 
             rbnTarde.AutoSize = true;
-            rbnTarde.Location = new Point(199, 209);
+            rbnTarde.Location = new Point(100, 22);
             rbnTarde.Name = "rbnTarde";
             rbnTarde.Size = new Size(53, 19);
             rbnTarde.TabIndex = 11;
@@ -159,7 +136,7 @@
             // rbnNoche
             // 
             rbnNoche.AutoSize = true;
-            rbnNoche.Location = new Point(282, 209);
+            rbnNoche.Location = new Point(183, 22);
             rbnNoche.Name = "rbnNoche";
             rbnNoche.Size = new Size(60, 19);
             rbnNoche.TabIndex = 12;
@@ -170,7 +147,7 @@
             // lblCarrera
             // 
             lblCarrera.AutoSize = true;
-            lblCarrera.Location = new Point(44, 270);
+            lblCarrera.Location = new Point(44, 235);
             lblCarrera.Name = "lblCarrera";
             lblCarrera.Size = new Size(45, 15);
             lblCarrera.TabIndex = 13;
@@ -179,43 +156,78 @@
             // cmbCarrera
             // 
             cmbCarrera.FormattingEnabled = true;
-            cmbCarrera.Location = new Point(172, 267);
+            cmbCarrera.Items.AddRange(new object[] { "analista en sistemas", "programacion", "diseño grafico", "recursos humanos", "derecho", "comunicacion social" });
+            cmbCarrera.Location = new Point(172, 232);
             cmbCarrera.Name = "cmbCarrera";
             cmbCarrera.Size = new Size(121, 23);
             cmbCarrera.TabIndex = 15;
             // 
             // btnRegistrar
             // 
-            btnRegistrar.Location = new Point(148, 317);
+            btnRegistrar.Location = new Point(218, 289);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(75, 23);
             btnRegistrar.TabIndex = 16;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
+            // 
+            // mtbDni
+            // 
+            mtbDni.Location = new Point(159, 78);
+            mtbDni.Name = "mtbDni";
+            mtbDni.Size = new Size(134, 23);
+            mtbDni.TabIndex = 17;
+            // 
+            // gbxSexo
+            // 
+            gbxSexo.Controls.Add(rbnFemenino);
+            gbxSexo.Controls.Add(rbnMasculino);
+            gbxSexo.Location = new Point(44, 111);
+            gbxSexo.Name = "gbxSexo";
+            gbxSexo.Size = new Size(200, 46);
+            gbxSexo.TabIndex = 19;
+            gbxSexo.TabStop = false;
+            gbxSexo.Text = "sexo";
+            // 
+            // gbxTurno
+            // 
+            gbxTurno.Controls.Add(rbnNoche);
+            gbxTurno.Controls.Add(rbnMañana);
+            gbxTurno.Controls.Add(rbnTarde);
+            gbxTurno.Location = new Point(44, 163);
+            gbxTurno.Name = "gbxTurno";
+            gbxTurno.Size = new Size(251, 53);
+            gbxTurno.TabIndex = 20;
+            gbxTurno.TabStop = false;
+            gbxTurno.Text = "turno";
             // 
             // frmCaso4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(363, 384);
+            ClientSize = new Size(323, 362);
+            Controls.Add(gbxTurno);
+            Controls.Add(gbxSexo);
+            Controls.Add(mtbDni);
             Controls.Add(btnRegistrar);
             Controls.Add(cmbCarrera);
             Controls.Add(lblCarrera);
-            Controls.Add(rbnNoche);
-            Controls.Add(rbnTarde);
-            Controls.Add(rbnMañana);
-            Controls.Add(lblTurno);
-            Controls.Add(rbnFemenino);
-            Controls.Add(rbnMasculino);
-            Controls.Add(lblSexo);
-            Controls.Add(txtDNI);
             Controls.Add(txtApellido);
             Controls.Add(txtNombre);
             Controls.Add(lblDNI);
             Controls.Add(lblApellido);
             Controls.Add(lblNombre);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmCaso4";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Registro De Alumno";
+            Load += frmCaso4_Load;
+            gbxSexo.ResumeLayout(false);
+            gbxSexo.PerformLayout();
+            gbxTurno.ResumeLayout(false);
+            gbxTurno.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -227,8 +239,6 @@
         private Label lblDNI;
         private TextBox txtNombre;
         private TextBox txtApellido;
-        private TextBox txtDNI;
-        private Label lblSexo;
         private RadioButton rbnMasculino;
         private RadioButton rbnFemenino;
         private Label lblTurno;
@@ -238,5 +248,8 @@
         private Label lblCarrera;
         private ComboBox cmbCarrera;
         private Button btnRegistrar;
+        private MaskedTextBox mtbDni;
+        private GroupBox gbxSexo;
+        private GroupBox gbxTurno;
     }
 }
