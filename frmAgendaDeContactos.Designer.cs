@@ -70,6 +70,7 @@
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(100, 23);
             txtTelefono.TabIndex = 3;
+            txtTelefono.KeyPress += txtTelefono_KeyPress;
             // 
             // btmAgregar
             // 

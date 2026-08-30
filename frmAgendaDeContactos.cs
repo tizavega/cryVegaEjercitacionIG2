@@ -61,5 +61,14 @@ namespace cryVegaEjercitacionIG2
                 MessageBoxIcon.Information);
 
         }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // permite solo dígitos numéricos y teclas de control (ej. Backspace)
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
